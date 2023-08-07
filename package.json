@@ -2,7 +2,6 @@
   "name": "react",
   "version": "1.0.0",
   "description": "This is react by sai charan",
-  "main": "index.js",
   "scripts": {
     "test": "jest"
   },
@@ -20,7 +19,8 @@
   },
   "homepage": "https://github.com/SaiCharan1394/react#readme",
   "devDependencies": {
-    "parcel": "^2.9.3"
+    "parcel": "^2.9.3",
+    "process": "^0.11.10"
   },
   "dependencies": {
     "react": "^18.2.0",
