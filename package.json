@@ -1,0 +1,25 @@
+{
+  "name": "react",
+  "version": "1.0.0",
+  "description": "This is react by sai charan",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SaiCharan1394/react.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "Saicharan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SaiCharan1394/react/issues"
+  },
+  "homepage": "https://github.com/SaiCharan1394/react#readme",
+  "devDependencies": {
+    "parcel": "^2.9.3"
+  }
+}
