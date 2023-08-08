@@ -1,16 +1,5 @@
 import React from "react";
 import ReactDOM  from "react-dom/client";
-
-const parent = React.createElement("div", { id: "parent" }, [
-  React.createElement("div", { id: "child" }, [
-    React.createElement("h1", {}, "i am child"),
-    React.createElement("h1", {}, "i am child"),
-  ]),
-  React.createElement("div", { id: "child" }, [
-    React.createElement("h1", {}, "i am child"),
-    React.createElement("h1", {}, "i am child"),
-  ]),
-]);
-const root = ReactDOM.createRoot(document.getElementById("container"));
-root.render(parent);
-
+const heading= <h1 id='heading'>react</h1>;
+const root=ReactDOM.createRoot(document.getElementById('card'));
+root.render(heading);
