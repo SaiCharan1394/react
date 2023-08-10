@@ -1,5 +1,6 @@
 .header {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   border: 1px solid black;
 }
@@ -8,30 +9,27 @@
 }
 .nav-items > ul {
   display: flex;
-  justify-content: center;
-  text-align: center;
-  list-style-type: none;
+  list-style: none;
 }
 .nav-items > ul > li {
-  padding-right: 10px;
+  margin-right: 20px;
 }
-.search{
-    margin: 10px;
+.search {
+  margin: 10px 0px;
 }
-.card-container{
-    display: flex;
-    flex-wrap: wrap;
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
 }
 .rescard {
-  width: 200px;
+  width: 175px;
   padding: 5px;
-  margin: 5px;
-  border-radius: 25px;
 }
-.rescard:hover{
+.rescard:hover {
   border: 1px solid black;
+  filter: hover;
 }
-.Image{
-    width: 100%;
-    border-radius: 25px;
+.rescard .card-image {
+  width: 100%;
+  height: 25%;
 }
