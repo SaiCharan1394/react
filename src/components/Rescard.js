@@ -1,3 +1,5 @@
+import { CDN_URL } from "../utils/constant";
+
 const ResCard = (resData) => {
     const { name, cuisines, avgRating, costForTwo, cloudinaryImageId } =
       resData?.resData.info;
@@ -7,7 +9,7 @@ const ResCard = (resData) => {
           <img
             className="card-image"
             src={
-               +
+              CDN_URL +
               cloudinaryImageId
             }
             alt="Image of card"
