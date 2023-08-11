@@ -26,7 +26,7 @@
   padding: 5px;
 }
 .rescard:hover {
-  border: 17px solid black;
+  border: 1px solid black;
   filter: hover;
 }
 .rescard .card-image {
