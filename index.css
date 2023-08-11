@@ -15,14 +15,14 @@
   margin-right: 15px;
 }
 .search {
-  margin: 20px 0px;
+  margin: 10px 0px;
 }
 .card-container {
   display: flex;
   flex-wrap: wrap;
 }
 .rescard {
-  width: 175px;
+  width: 15px;
   padding: 5px;
 }
 .rescard:hover {
