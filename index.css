@@ -23,7 +23,7 @@
 }
 .rescard {
   width: 175px;
-  padding: 5px;
+  padding: 10px;
 }
 .rescard:hover {
   border: 1px solid black;
