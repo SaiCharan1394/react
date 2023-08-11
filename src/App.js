@@ -20,12 +20,6 @@ import Body from "./components/Body";
   -social links
 */
 
-
-
-
-
-
-
 const AppLayout = () => {
   return (
     <div className="app">
@@ -36,3 +30,4 @@ const AppLayout = () => {
 };
 const root = ReactDOM.createRoot(document.getElementById("card"));
 root.render(<AppLayout />);
+
