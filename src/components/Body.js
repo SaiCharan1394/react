@@ -9,7 +9,7 @@ const Body = () => {
   console.log(reList);
   return (
     <div className="body">
-      <div className="search">
+      <div className="">
         <button
           onClick={() => {
             const filtered = reList.filter((i) => i.info.avgRating >= 4);
