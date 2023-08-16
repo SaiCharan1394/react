@@ -2,7 +2,7 @@ import ResCard from "./Rescard";
 
 import resList from "../utils/mockdata";
 
-import { useState } from "";
+import { useState } from "react";
 
 const Body = () => {
   const [reList, setreList] = useState(resList);
