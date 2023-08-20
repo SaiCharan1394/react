@@ -2,11 +2,24 @@ import ResCard from "./Rescard";
 
 import resList from "../utils/mockdata";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Body = () => {
-  const [reList, setreList] = useState(resList);
-  console.log(reList);
+  const [reList, setreList] = useState([]);
+  useEffect(() => {
+    fetchdata();
+  }, []);
+  const fetchdata = async () => {
+    const data = await fetch(
+      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=16.2893144&lng=80.4604643&is-seo-homepage-enabled=true"
+    );
+    const json = await data.json();
+    setreList(json.data.cards[3].card.card.gridElements.infoWithStyle.restaurants);
+  };
+  if (reList.length===0){
+    return <h1>Loading...</h1>;
+  }
+
   return (
     <div className="body">
       <div className="search">
