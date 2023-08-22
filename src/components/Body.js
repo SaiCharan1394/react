@@ -1,9 +1,9 @@
 import ResCard from "./Rescard";
-
 import { useEffect, useState } from "react";
 
 const Body = () => {
   const [reList, setreList] = useState([]);
+  const [searchText, setSearchText] = useState("");
   useEffect(() => {
     fetchdata();
   }, []);
@@ -22,15 +22,27 @@ const Body = () => {
 
   return (
     <div className="body">
-      <div className="search">
-        <button
-          onClick={() => {
-            const filtered = reList.filter((i) => i.info.avgRating >= 4);
-            setreList(filtered);
-          }}
-        >
-          Top Res
-        </button>
+      <div className="filter">
+        <div className="search">
+          <input
+            type="text"
+            value={searchText}
+            onChange={(e) => {
+              setSearchText(e.target.value);
+            }}
+          ></input>
+          <button>search</button>
+        </div>
+        <div className="top-res">
+          <button
+            onClick={() => {
+              const filtered = reList.filter((i) => i.info.avgRating >= 4);
+              setreList(filtered);
+            }}
+          >
+            Top Res
+          </button>
+        </div>
       </div>
       <div className="card-container">
         {reList.map((i) => (
