@@ -29,7 +29,5 @@ const AppLayout = () => {
   );
 };
 
-
 const root = ReactDOM.createRoot(document.getElementById("card"));
 root.render(<AppLayout />);
-
