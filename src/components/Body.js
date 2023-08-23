@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 const Body = () => {
   const [reList, setreList] = useState([]);
   const [searchText, setSearchText] = useState("");
-  const [filteredRes, setFilteredRes] = useState([])
+  const [filteredRes, setFilteredRes] = useState([]);
   useEffect(() => {
     fetchdata();
   }, []);
@@ -14,10 +14,10 @@ const Body = () => {
     );
     const json = await data.json();
     setreList(
-      json.data.cards[3].card.card.gridElements.infoWithStyle.restaurants
+      json?.data?.cards[3]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
     setFilteredRes(
-      json.data.cards[3].card.card.gridElements.infoWithStyle.restaurants
+      json?.data?.cards[3]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
   };
   if (reList.length === 0) {
@@ -35,11 +35,16 @@ const Body = () => {
               setSearchText(e.target.value);
             }}
           ></input>
-          <button onClick={()=>{
-            const filteredRes=reList.filter((res)=>res.info.name.toLowerCase().includes(searchText.toLowerCase()));
-            setFilteredRes(filteredRes)
-
-          }}>search</button>
+          <button
+            onClick={() => {
+              const filteredRes = reList.filter((res) =>
+                res.info.name.toLowerCase().includes(searchText.toLowerCase())
+              );
+              setFilteredRes(filteredRes);
+            }}
+          >
+            search
+          </button>
         </div>
         <div className="top-res">
           <button
