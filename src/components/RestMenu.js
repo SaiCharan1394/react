@@ -1,9 +1,8 @@
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
-
 const RestaurantMenu = () => {
-    const [resInfo,setResInfo]=useState([])
+  const [resInfo, setResInfo] = useState(null);
   useEffect(() => {
     fetchMenu();
   }, []);
@@ -14,13 +13,20 @@ const RestaurantMenu = () => {
     const json = await data.json();
     setResInfo(json);
   };
-  const card=resInfo?.data?.cards[3]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card
-  console.log(card);
-  const {name,price}=card?.itemCards[0]?.card?.info
+  if (resInfo === null) return <h1>Loading...</h1>;
+  console.log(resInfo);
+  const { name,cuisines } =
+    resInfo?.data?.cards[0]?.card
+      ?.card.info;
+  const {items}=resInfo?.data?.cards[3]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card
+  ?.card.itemCards[0]?.card?.info;
   return (
     <div>
       <h1>{name}</h1>
-      <h2>{price}</h2>
+      <h3>{cuisines.join(', ')}</h3>
+      <li>
+        <ol>{items}</ol>
+      </li>
     </div>
   );
 };
