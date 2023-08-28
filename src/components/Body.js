@@ -1,6 +1,6 @@
 import ResCard from "./Rescard";
 import { useEffect, useState } from "react";
-
+import { Link } from "react-router-dom";
 const Body = () => {
   const [reList, setreList] = useState([]);
   const [searchText, setSearchText] = useState("");
@@ -59,8 +59,8 @@ const Body = () => {
         </div>
       </div>
       <div className="card-container">
-        {filteredRes.map((i) => (
-          <ResCard key={i.info.id} resData={i} />
+        {filteredRes.map((i) => (<Link key={i.info.id} to={"/restaurant/"+i.info.id}>
+          <ResCard  resData={i} /></Link>
         ))}
       </div>
     </div>
