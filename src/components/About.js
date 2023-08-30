@@ -5,7 +5,7 @@ const About = () => {
     <div>
       <h1>This is about section</h1>
       <User name={"saicharan (func)"} />
-      <UserClass />
+      <UserClass name={"saicharan (class)"}/>
     </div>
   );
 };
