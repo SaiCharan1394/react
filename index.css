@@ -36,9 +36,13 @@
 .btn {
   margin-right: 10px;
 }
-.filter{
+.filter {
   display: flex;
   flex-wrap: wrap;
   margin-top: 10px;
   margin-bottom: 10px;
+}
+.resmenu {
+  display: flex;
+  flex-wrap: wrap;
 }
