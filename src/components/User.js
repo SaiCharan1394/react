@@ -7,7 +7,7 @@ const User = ({ name }) => {
       <h1>Name: {name}</h1>
       <h2>Count: {count}</h2>
       <h2>Location: Piler</h2>
-      <h3>Mail: akkiraju</h3>
+      <h3>Mail: akkiraju@gmail.com</h3>
     </div>
   );
 };
