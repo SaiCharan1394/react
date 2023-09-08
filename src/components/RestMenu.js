@@ -8,8 +8,7 @@ const RestaurantMenu = () => {
   console.log(resInfo);
   const { name, cuisines } = resInfo?.data?.cards[0]?.card?.card.info;
   const { itemCards } =
-    resInfo?.data?.cards[3]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card
-      ?.card;
+    
   return (
     <div className="resmenu">
       <h1>{name}</h1>
