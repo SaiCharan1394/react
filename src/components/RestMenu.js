@@ -4,7 +4,13 @@ import { useParams } from "react-router-dom";
 const RestaurantMenu = () => {
   const { resId } = useParams();
   const resInfo = useRestaurentMenu(resId);
-  (
+  if (resInfo === null) return <h1>Loading...</h1>;
+  console.log(resInfo);
+  const { name, cuisines } = resInfo?.data?.cards[0]?.card?.card.info;
+  const { itemCards } =
+    resInfo?.data?.cards[3]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card
+      ?.card;
+  return (
     <div className="resmenu">
       <h1>{name}</h1>
       <h3>{cuisines.join(", ")}</h3>
