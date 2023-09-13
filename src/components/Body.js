@@ -1,6 +1,7 @@
 import ResCard from "./Rescard";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../utils/useOnlineStatus";
 const Body = () => {
   const [reList, setreList] = useState([]);
   const [searchText, setSearchText] = useState("");
@@ -21,6 +22,9 @@ const Body = () => {
       json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
   };
+
+  const onlineStatus = useOnlineStatus();
+  if (onlineStatus === false) return <h1>ur offline!! check ur connection</h1>;
 
   if (reList.length === 0) {
     return <h1>Loading...</h1>;
